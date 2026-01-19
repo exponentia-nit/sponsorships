@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponentia'26 - Sponsorship Opportunities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .brochure {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 150%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .header-text {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-text h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        
+        .header-text .subtitle {
+            font-size: 1.4em;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+        
+        .header-text .dept {
+            font-size: 1.1em;
+            opacity: 0.85;
+        }
+        
+        .intro-banner {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 40px 50px;
+            border-bottom: 3px solid #2a5298;
+        }
+        
+        .intro-banner h2 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .intro-banner p {
+            color: #334155;
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .content {
+            padding: 50px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            font-size: 2.2em;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            font-weight: 800;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 70%;
+            background: linear-gradient(180deg, #2a5298, #7e22ce);
+            border-radius: 3px;
+        }
+        
+        .tier-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .tier-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2a5298, #7e22ce);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(42, 82, 152, 0.25);
+            border-color: #2a5298;
+        }
+        
+        .tier-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        .tier-card h3 {
+            font-size: 1.8em;
+            color: #1e3c72;
+            font-weight: 800;
+        }
+        
+        .tier-card .price {
+            font-size: 2em;
+            color: #7e22ce;
+            font-weight: 900;
+        }
+        
+        .tier-section {
+            margin-bottom: 25px;
+        }
+        
+        .tier-section h4 {
+            font-size: 1.1em;
+            color: #2a5298;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .tier-card ul {
+            list-style: none;
+        }
+        
+        .tier-card li {
+            padding: 10px 0;
+            color: #475569;
+            font-size: 1em;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .tier-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .why-sponsor {
+            background: linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .why-sponsor h2 {
+            color: #7e22ce;
+        }
+        
+        .why-sponsor ul {
+            list-style: none;
+        }
+        
+        .why-sponsor li {
+            padding: 15px 0;
+            color: #334155;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 35px;
+        }
+        
+        .why-sponsor li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: #7e22ce;
+            font-size: 1.4em;
+        }
+        
+        .in-kind {
+            background: #f8fafc;
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 5px solid #2a5298;
+        }
+        
+        .in-kind h3 {
+            color: #1e3c72;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .in-kind p {
+            color: #475569;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .in-kind ul {
+            list-style: none;
+        }
+        
+        .in-kind li {
+            padding: 8px 0;
+            color: #475569;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .in-kind li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-size: 1.5em;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #1e3c72 0%, #7e22ce 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        
+        .cta h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta h2::before {
+            display: none;
+        }
+        
+        .cta p {
+            font-size: 1.25em;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .contact-card p {
+            margin: 8px 0;
+            font-size: 1em;
+        }
+        
+        .contact-card strong {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        
+        .footer-note {
+            background: #f1f5f9;
+            padding: 30px 50px;
+            text-align: center;
+            color: #475569;
+            font-size: 0.95em;
+        }
+        
+        .footer-note strong {
+            color: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <div class="brochure">
+        <div class="header">
+            <div class="logo-container">
+                <img class="logo" src="NITT_logo.png" alt="">
+                <div class="header-text">
+                    <h1>Exponentia'26</h1>
+                    <div class="subtitle">Annual National-Level Departmental Event</div>
+                    <div class="dept">Department of Mathematics, NIT Tiruchirappalli</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro-banner">
+            <h2>📢 Sponsorship Opportunities</h2>
+            <p><strong>Greetings from the Department of Mathematics, National Institute of Technology, Tiruchirappalli</strong> (Ranked No. 1 among NITs in India).</p>
+            <p>We are organizing <strong>Exponentia</strong>, the annual national-level technical and cultural event of the Department of Mathematics at NIT Trichy. Exponentia brings together the brightest minds in mathematics through engaging competitions, problem-solving events, and academic activities. We are expecting participation from <strong>300+ students</strong> from universities across India, providing excellent visibility and outreach for your brand.</p>
+            <p>As a sponsor, your brand will receive extensive exposure before, during, and after the event, through multiple touchpoints and media channels.</p>
+            <p><strong>Faculty Advisor:</strong> Jitraj Saha</p>
+        </div>
+        
+        <div class="content">
+            <div class="section why-sponsor">
+                <h2>Why Sponsor Exponentia?</h2>
+                <ul>
+                    <li>Engage with 300+ math-oriented students</li>
+                    <li>Exclusive brand association with NIT Trichy</li>
+                    <li>Name recall through mentions and certificates</li>
+                    <li>Visibility through physical and digital materials</li>
+                    <li>Post-event media exposure to continue brand reach</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Sponsorship Tiers</h2>
+                
+                <div class="tier-grid">
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>1. Title Sponsor</h3>
+                            <div class="price">₹35,000</div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Brand Visibility:</h4>
+                            <ul>
+                                <li>Event referred to as "Exponentia presented by [Title Sponsor]"</li>
+                                <li>Title Sponsor's name announced every time the event name is mentioned: Opening ceremony, Competition announcements, Prize distribution, Certificates and official communications</li>
+                                <li>Largest logo placement on: Posters, flyers, brochures (physical & digital), Online invitations and registration forms, Certificates for participants and winners</li>
+                                <li>Exclusive branding on the main event backdrop/banner</li>
+                                <li>Acknowledgment during prize and certificate distribution</li>
+                                <li>Flyer/brochure distribution during the event</li>
+                                <li>Dedicated stall/interaction desk (if required)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Promotional Announcements:</h4>
+                            <ul>
+                                <li>Frequent mentions during: Opening, competitions, breaks, and prize distribution</li>
+                                <li>At least 4–5 announcements during the event duration (including online platforms)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Post-Event Media Exposure:</h4>
+                            <ul>
+                                <li>Social media post-event coverage showcasing highlights</li>
+                                <li>Thank-you emails to all participants with sponsor acknowledgments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>2. Gold Sponsor</h3>
+                            <div class="price">₹25,000</div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Brand Visibility:</h4>
+                            <ul>
+                                <li>Logo placement on: Posters, flyers, brochures, Online invitations and registration platforms</li>
+                                <li>Certificates (below Title Sponsor)</li>
+                                <li>Banner/standee at the venue</li>
+                                <li>Sponsor mention during major competition announcements</li>
+                                <li>Flyer/brochure distribution during the event</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Promotional Announcements:</h4>
+                            <ul>
+                                <li>Multiple mentions during: Major events like opening, competitions, breaks, and prize announcements</li>
+                                <li>At least 2–3 announcements during the event duration</li>
+                                <li>Mentions during online streams (if applicable)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Post-Event Media Exposure:</h4>
+                            <ul>
+                                <li>Social media post-event coverage thanking sponsors</li>
+                                <li>Post-event thank-you emails featuring sponsor logos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>3. Silver Sponsor</h3>
+                            <div class="price">₹15,000</div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Brand Visibility:</h4>
+                            <ul>
+                                <li>Logo placement on: Selected posters, flyers, brochures, Online invitations</li>
+                                <li>Logo on certificates (smaller size)</li>
+                                <li>Standee/banner at the venue</li>
+                                <li>Social media acknowledgment</li>
+                                <li>Flyer/brochure distribution rights</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Promotional Announcements:</h4>
+                            <ul>
+                                <li>1-2 mentions during: Opening ceremony, closing ceremony, and key competitions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>4. Associate Sponsor</h3>
+                            <div class="price">₹7,000</div>
+                        </div>
+                        
+                        <div class="tier-section">
+                            <h4>Brand Visibility:</h4>
+                            <ul>
+                                <li>Logo placement on event brochures and online invitations</li>
+                                <li>Mention during opening/closing ceremony</li>
+                                <li>Social media thank-you post</li>
+                                <li>Flyer/brochure distribution for participants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="in-kind">
+                    <h3>5. In-Kind Sponsors</h3>
+                    <p>We welcome in-kind sponsorships in the form of:</p>
+                    <ul>
+                        <li>Competition prizes</li>
+                        <li>Certificates printing</li>
+                        <li>Merchandise</li>
+                        <li>Refreshments, etc.</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 20px; margin-bottom: 10px; color: #1e3c72;">In-Kind Sponsor Benefits:</h4>
+                    <ul>
+                        <li>Logo displayed under "In-Kind Sponsors" on posters and brochures</li>
+                        <li>Brand mention during prize distribution</li>
+                        <li>Social media acknowledgment</li>
+                        <li>Branding on sponsored items (where applicable)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <h2>Ready to Partner With Us?</h2>
+                <p>We would love to discuss this sponsorship opportunity and explore how we can create a mutually beneficial collaboration.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Naveen N</h3>
+                        <p><strong>Chief Event Coordinator</strong></p>
+                        <p><strong>Exponentia'26</strong></p>
+                        <p>Department of Mathematics</p>
+                        <p>NIT Tiruchirappalli</p>
+                        <p>📞 9486306426</p>
+                        <p>✉️ 216124007@nitt.edu</p>
+                        <p>✉️ exponentia.nitt@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Miss Roshini S</h3>
+                        <p><strong>Sponsorship & Partnership Head</strong></p>
+                        <p><strong>Exponentia'26</strong></p>
+                        <p>Department of Mathematics</p>
+                        <p>NIT Tiruchirappalli</p>
+                        <p>📞 7021556289</p>
+                        <p>✉️ 216124017@nitt.edu</p>
+                        <p>✉️ sponsorships.exponentia@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p><strong>Looking forward to your positive response.</strong></p>
+            <p>Warm regards,<br>The Exponentia'26 Team</p>
+        </div>
+    </div>
+</body>
+</html>
